@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100svw;
+    height: 100svh;
+    background-color: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    perspective: 2000px;
+    perspective-origin: 800px 800px;
+}
+
+.side {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: inset 2px 2px 10px white, inset -2px -2px 10px white;
+}
+
+.side1 {
+    background-color: rgb(96, 183, 186, 0.5);
+    transform: translateZ(200px);
+    transform-origin: left;
+    z-index: 1;
+}
+
+.side2 {
+    background-color: rgb(96, 183, 186, 0.5);
+    transform-origin: left;
+}
+
+.side3 {
+    background-color: rgb(96, 183, 186, 0.5);
+    transform: translateX(-200px) rotateY(90deg);
+    transform-origin: right;
+}
+
+.side4 {
+    background-color: rgb(96, 183, 186, 0.5);
+    transform: translateX(200px) rotateY(-90deg);
+    transform-origin: left;
+}
+
+.side5 {
+    background-color: rgb(96, 183, 186, 0.5);
+    transform: translateY(-200px) rotateX(-90deg);
+    transform-origin: bottom;
+}
+
+.side6 {
+    background-color: rgb(96, 183, 186, 0.5);
+    transform: translateY(200px) rotateX(90deg);
+    transform-origin: top;
+}
+
+
+.side:hover {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white;
+    background-color: cadetblue;
+    font-size: 2rem;
+
+}
